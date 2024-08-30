@@ -1,0 +1,33 @@
+{
+  "apps": [
+    {
+      "url": "https://httpbin.org/status/200",
+      "name": "HTTPBin - Status 200",
+      "ip": "93.184.216.34",
+      "dependencies": []
+    },
+    {
+      "url": "https://httpbin.org/status/500",
+      "name": "HTTPBin - Status 500",
+      "ip": "93.184.216.34",
+      "dependencies": [
+        "https://httpbin.org/status/200"
+      ]
+    },
+    {
+      "url": "https://jsonplaceholder.typicode.com/posts",
+      "name": "JSONPlaceholder - Posts",
+      "ip": "104.26.14.228",
+      "dependencies": []
+    },
+    {
+      "url": "https://reqres.in/api/users/23",
+      "name": "ReqRes - User 23",
+      "ip": "23.21.206.145",
+      "dependencies": [
+        "https://jsonplaceholder.typicode.com/posts",
+        "https://httpbin.org/status/200"
+      ]
+    }
+  ]
+}
